@@ -1,0 +1,1608 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+html, body {
+	margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+	background-color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.clear {
+  clear: both;
+}
+a {
+  text-decoration:inherit
+  }
+.shadow{
+  height: 100%;
+  background: rgba(20, 24, 30, 0.404);
+  background-size: cover;
+}
+/* ---------------- Start Of Header CSS ---------------- */
+.menu {
+    display: flex;
+    height: 10vh;
+    background: #7BCABB;
+}
+.menu .logo-container .logo {
+    opacity: 1;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.menu .nav-container {
+	flex: 1;
+}
+.menu .my-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    height: 10vh;
+    margin: 0;
+    align-items: center;
+    font-family: "Roboto";
+}
+.menu a {
+    color: #fff;
+}
+
+.menu .my-list .list-item {
+  margin: 10px
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 6px;
+    line-height: 36px;
+    min-width: 88px;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center
+}
+a:hover {
+ background: #5cab9c
+}
+.menu .menu-toggle { 
+  display: none;
+}
+#singInM{
+  display: none
+}
+#singUpM{
+  display: none
+}
+@media (max-width: 768px) {
+  .menu{
+    height: 50px;
+  }
+  .nav-container {
+      display: none;
+  }
+  .menu .my-list {
+    position: absolute;
+    right: 0;
+    top: 34px;
+    z-index: 1; 
+    display: block;
+    background: #7BCABB;
+    height: auto;
+    padding: 0
+  }
+  .list-item{
+    border-bottom:  solid white;
+  }
+  .menu .menu-toggle {
+    position: absolute;
+    display: block;
+    z-index: 4;
+    right: 0px;
+  }
+  .menu .menu-toggle a {
+    margin: 0px;
+    height: 50px;
+    line-height: 25px;
+    min-width: 75px;
+  }
+  .menu .menu-toggle a i{
+    margin: 10px 5px;
+    color: white;
+  }
+  .icon-nav {
+    font-family: icons;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  #singIn{
+    display: none;
+  }
+  #singInM{
+    display:block;
+  }
+  #singUpM{
+    display:block;
+    border-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0
+  }
+}
+/* ---------------- End Of Header CSS ---------------- */
+
+/* ---------------- Start Of Modal CSS ---------------- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: grey;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #1E1D21;
+  width: 75%;
+  height: 428px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+/* The Close Button */
+.close {
+position: absolute;
+right: 1px;
+top: -35px;
+width: 30px;
+background: rgba(123, 202, 187, 0.69);
+color: white;
+text-align: center;
+font-size: 28px;
+font-weight: bold;
+padding: 2px 10px;
+}
+.close:hover,
+.close:focus {
+color: #3A6869;
+text-decoration: none;
+cursor: pointer;
+}
+.modal-part1 {
+  width: 30%;
+  height: 400px;
+  padding: 3% 2%;
+  margin: auto;
+  text-align: center;
+  background: #7BCABB;
+  float: left;
+  display: none
+}
+.modal-part2 {
+  width: 62%;
+  height: 400px;
+  padding: 3% 2%;
+  margin: auto;
+  background: #fff;
+  display: none;
+}
+.x-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #7BCABB;
+  color: #fff;
+  width: 20px;
+  height: 30px;
+  padding: 10px 5px;
+  margin: 0;
+  font-size: 25px;
+  text-align: center;
+}
+.modal-part1 h2 {
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 33px;
+}
+.modal-part2 h2 {
+  color: #7BCABB;
+  margin-top: 10px;
+}
+
+.modal-part1 .primary-button {
+  background-color: #7BCABB;
+  color: #fff;
+  padding: 0px 50px;
+  margin: 10px auto;
+  border-radius: 20px;
+  font-size: 2rem;
+  border: 2px solid #fff;
+}
+.signIn-part {
+  width: 43%;
+  display: inline-block;
+  margin: 3%;
+}
+#closeM{
+  display: none
+}
+.buttons-side {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.modal-prm-btn {
+  display: block;
+  background: #7BCABB;
+  color: white;
+  width: 40%;
+  padding: 5px 15px;
+  font-size: 1.6rem;
+  border-radius: 18px;
+  border: none;
+}
+.socialF{
+  background: white;
+  color:#45609e!important;
+  border:2px solid#45609e;
+  padding: 0 15px
+}
+.socialG{
+  background: white;
+  color:#df302e!important;
+  border:2px solid#df302e;
+  padding: 0 15px
+}
+.modal-prm-btn i{
+  margin: 0
+}
+@media (max-width: 1006px) {
+  .modal-part1 .primary-button {
+    padding: 0 25px;
+  }
+}
+@media (max-width: 768px) {
+  .modal-content {
+    height: 75%;
+    padding-bottom: 0
+  }
+  .modal-part1 {
+    width: 100%;
+    height: 100%;
+  }
+  .modal-part2 { 
+    width: 100%;
+    height: 100%;
+  }
+  #closeM{
+    display: inline-block
+  }
+  .buttons-side {
+    align-items: center;
+  }
+  .modal-prm-btn {
+    width: 80%;
+  }
+  .x-button{
+    min-width: 15px;
+    padding: 0;
+  }
+}
+/* ---------------- End Of Modal CSS ---------------- */
+
+/* ---------------- Start Of Footer CSS ---------------- */
+
+.footer-part1 {
+    width: 90%;
+    padding: 1% 5%;
+    text-align: left;
+    margin-top: 10vh
+}
+.logo_gloubuzzer {
+    margin: 30px 0 0 0;
+    position: relative;
+    left: 114px;
+    bottom: 30px;
+}
+.footer{
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  background: #7BCABB;
+  color: #434c49;
+}
+.footerA{
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  max-width: 35%;
+}
+.footerA ul{
+  list-style-type: none;
+}
+.footerA ul li a{
+  color: #434c49;  
+}
+.footerB{
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  max-width: 65%;
+}
+.social{
+  position: relative;
+  text-align: right;
+  right: 20px;
+  top: 15px;
+}
+.textS {
+  position: relative;
+  text-align: right;
+  right: 20px;
+  top: 50px;
+}
+.textS h4{
+  margin: 0
+}
+@media (max-width: 768px){
+  .footerA ul{
+    padding-left: 3px
+  }
+}
+/* ---------------- End Of Footer CSS ---------------- */
+
+/* ---------------- Start Of Home CSS ---------------- */
+  /* --- Start Of Jumbotron CSS --- */
+.jumbotron{
+  background: #7BCABB;
+  width: 100%;
+  height: 90vh;
+  background: #7BCABB
+}
+.space{
+  display: inline-block;
+  width: 6%;
+  height: 90vh;
+}
+.jumbotronHome{
+  display: inline-block;
+  width: 93.7%;
+  height: 90vh;
+  background: #14181E url(../images/landing.jpg) no-repeat 50% 50%;
+  background-size: cover; 
+}
+.decore{
+  width: 20%;
+  height: 3vh;
+  background: #a0a0a0;
+  position: relative;
+  left: -6.7%;
+  top: 19vh
+}
+.textJ{
+  position: absolute;
+  top: 30vh;
+  margin: 0 20px;
+}
+.textJ h1{
+  color: #7BCABB;
+  font-size: 4rem;
+}
+.textJ p{
+  font-size: 1.6rem;
+  width: 50%;
+  color: #FFFFFF;
+}
+.textJ a{
+  background: #7BCABB;
+  color: white;
+  width: 25%;
+  padding: 10px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 18px
+}
+@media (max-width: 1006px) {
+  .space{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .decore{
+    display: none
+  }
+  .jumbotron{
+    height: auto;
+  }
+  .jumbotronHome{
+    width: 100%;
+    height: auto;
+  }
+  .textJ{
+    position: relative;
+    top: 0vh;
+    margin: 0
+  }
+  .textJ h1{
+    font-size: 2.8rem;
+    margin: 30px 20px ;    
+    letter-spacing: 4px;
+  }
+  .textJ p{
+    font-size: 1.4rem;
+    margin: 25% auto 30% auto;
+    width: 80%;
+    color: #FFFFFF;
+    text-align: left;
+  }
+  .textJ a{
+    color: white;
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 0px;
+    margin: 0;
+  }
+  .shadow{
+    display: inline-block
+  }
+}
+  /* --- End Of Jumbotron CSS --- */
+  /* --- Start Of How it works CSS --- */
+  .works{
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+    text-align: center;
+    margin-top: 4rem;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .works h1{
+    font-size: 3rem;
+    color: #7BCABB  ;
+    padding: 5px;
+    margin: 1px auto;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: "Roboto", sans-serif;
+  }
+  .works p{
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 1px auto; 
+    text-align: center;
+    width: 50%;
+  }
+  .works .inner .content {
+    margin: 5px auto;
+  }
+  .content h1 {
+    color: #7BCABB;
+    font-size: 4rem;
+    margin: 0px;
+    letter-spacing: 5px;
+  }
+  #circlePlay {
+    display: none;
+  }
+  #circle {
+    width: 135px;
+    height: 135px;
+    background: #7BCABB;
+    border: 2px solid #808080;
+    border-radius: 50%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  hr.style1{
+    display: inline-block;
+    border-top: 2px solid #D4CDC3;
+    width: 50px;
+  }  
+  #sampleMovie {
+    max-width: 550px;
+    height: 320px;
+    padding: 10px;
+    background: #F6F6F6;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #blue{
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+  }
+  @media (max-width: 768px) {
+    .works{
+      width: 100%;
+    }
+    .works p {
+      font-size: 18px;
+      margin: 0 auto 30px auto;
+      padding: 10px 20px;
+      text-align: left;
+      color: #fff;
+      width: 80%;
+    }
+    #circle {
+        display: none;
+    }
+    .fa-play-circle:before {
+      color: #7BCABB
+    }
+    #sampleMovie {
+      width: 90%;
+      height: auto;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .works h1 {
+      font-size: 2.5rem;
+      padding: 25px;
+      font-weight: bold;
+      margin:  auto; 
+      text-align: center;
+    }
+    .works {
+      width: 96%;
+      height: 99%;
+      min-height: 550px;
+      padding: 1% 2%;
+      margin: 0;
+      background: url(../images/how_it_works.jpg) no-repeat 50% 50%;
+    }
+    .works .inner .content {
+      margin: 0 auto;
+    }
+    #sampleMovie {
+      display: none;
+      width: 80%;
+      height: auto;
+    }
+  .fa-play-circle:before {
+      content: "\f144";
+      font-size: 80px;
+      /* background: #7BCABB; */
+      border-radius: 50%;
+      color: #7BCABB;
+      background: transparent;
+    }  
+    .content .primary-button-two {
+      background-color: #7BCABB;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      border-radius: 0px;
+      font-size: 3.1rem;
+      position: relative;
+      left: 0;
+      right:0;
+      bottom: 0;
+    }
+    #circlePlay {
+      display: block;
+    }
+  }
+  /* --- End Of How it works CSS --- */
+  /* --- Start Of Our Team CSS --- */
+  .site {
+    margin: 30px auto -50px auto;
+    padding: 5%;
+    width: 90%;
+    height: 100%;
+    min-height: 500px;
+    opacity: 0.9;
+    position: relative;
+}
+
+.site h1 {
+    font-size: 3rem;
+    color: #7BCABB;
+    padding: 5px;
+    margin: 1px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: "Roboto", sans-serif;
+}
+
+.site p {
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 0px auto 20px auto;
+    text-align: center;
+}
+
+.one {
+    width: 40%;
+    margin: 0% 5%;
+    height: 50%;
+    background: url(../images/besthost1.jpg) no-repeat 60% 50%;
+    display: table;
+    background-size: cover;
+    position: relative;
+    opacity: 0.7;
+}
+
+.item {
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    z-index: 10;
+    transition: width 0.2s, height 0.2s;
+}
+
+.point1 {
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #000;
+    font-size: 18px;
+}
+
+.point2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #000;
+}
+
+.three {
+    width: 40%;
+    margin: 0% 5%;
+    height: 50%;
+    background: #14181E url(../images/business-lady.jpeg) no-repeat 70% 50%;
+    display: table;
+    background-size: cover;
+    position: relative;
+    opacity: 0.6;
+}
+
+
+@media only screen and (max-width: 500px){
+  .one {
+    width: 90%;
+  }
+  hr.style1{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 500px){
+  .point1, .point2 {
+    font-size: 12px;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .three {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+
+  /* --- End Of Our Team CSS --- */
+  /* --- Start Of Comment CSS --- */
+  .comment {
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0rem;
+}
+  .comment .part1 {
+    width: 30%;
+    height: auto;
+    /*padding: 20px 20px;*/
+    display: inline-block;
+    float: left;
+  }
+  .comment .part2 {
+    width: 65%;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+    margin-top: 5%;
+  }
+  .part2 .photo {
+    width: 30%;
+    height: 400px;
+    margin-top: 0;
+    float: left;
+    opacity: 0.8;
+  }
+  .part2 .text {
+    width: 60%;
+    height: 100%;
+    background: #DFE2DB;
+    padding-right: 5%;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-right: inherit;
+    text-align: left;
+    overflow: hidden;
+  }
+  blockquote{
+    display: block;
+    background: transparent;
+    padding: 15px 0px 15px 40px;
+    margin: 30px 0 20px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #666;
+    text-align: right;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+  }
+  blockquote::before{
+    content: "\201C"; /*Unicode for Left Double Quote*/ 
+    /*Font*/
+    font-size: 60px;
+    font-weight: bold;
+    color: #7BCABB; 
+    /*Positioning*/
+    position: absolute;
+    left: 20px;
+    top:5px;
+  }
+  blockquote::after{
+    /*Reset to make sure*/
+    content: "\201D";
+    font-size: 60px;
+    font-weight: bold;
+    color: #7BCABB;;
+    /*Positioning*/
+    position: absolute;
+    margin-left: 2%;
+    z-index: 2;
+  }
+  .part1 h1{
+      font-size: 2rem;
+      color: #7BCABB;
+      padding-left: 40px;
+      margin: 1px;
+      text-align: left;
+      letter-spacing: 5px;
+      word-spacing: 10px;
+  }
+  .part1 p {
+      font-size: 18px;
+      padding-left: 50px;
+  }
+  .decoretwo {
+    position: relative;
+    top: 60px;   
+    margin-bottom: 0px;
+    width: 250px;
+    height: 30px;
+    background:  #A9A9A9;
+  }
+  @media (max-width: 768px) {
+    .part1 p {
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      padding-left: 50px;
+    }
+    .part1 h1 {
+      font-family: "Roboto", sans-serif;
+      font-size: 1rem;
+      color: #7BCABB;
+      padding-left: 20px;
+      margin: 1px;
+      text-align: left;
+      z-index: 2;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .comment {
+      width: 86%;
+      height: auto;
+      padding: 1% 1% 1% 5%;
+    }
+    .comment .part1 {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        display: inline-block;
+        float: none;
+        margin-top: 20px;
+    }
+    .comment .part2 {
+      width: 100%;
+    }
+    .part2 .photo {
+      width: 96%;
+      height: 100%;
+      float: left;
+      opacity: 0.9;
+    }
+    .part2 .text {
+      width: 76%;
+      height: auto;
+      padding: 10%;
+      display: inline-block;
+      font-size: 16px;
+      text-align: left;
+      overflow: initial;
+    }
+    blockquote {
+      display: inline-block;
+      background: transparent;
+      padding: 0;
+    }
+    blockquote::before {
+      position: absolute;
+      left: -15px;
+      top: -15px;
+    }
+    .part1 h1 {
+      font-size: 1.8rem;
+    }
+    .part1 p {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      padding-left: 0px;
+      margin-bottom: -20px;
+    }
+    .decoretwo{
+      display: none;
+    }
+  }
+  /* --- End Of Comment CSS --- */
+  .question-container {
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+    padding: 5% 0%;
+  }
+  .question-container h1 {
+    color: #7BCABB;
+    letter-spacing: 2px;
+    font-size: 2rem;
+  }
+  .question-container a{
+    background: #7BCABB;
+    color: white;
+    border-radius: 18px;
+    width: 200px;
+    padding: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  @media only screen and (max-width: 500px) {
+    .question-container h1 {
+      padding: 30px;
+    }
+    .question-container a {
+    position: relative;
+    width: 80%;
+    padding: 0;
+    }
+  }
+/* ---------------- End Of Home CSS ---------------- */
+
+/* ---------------- Start Of About CSS ---------------- */
+  /* --- Start Of Jumbotron CSS --- */
+.jumbotronAbout{
+  display: inline-block;
+  width: 93.7%;
+  height: 90vh;
+  background:url(../images/about.jpeg) no-repeat 50% 50%;
+  background-size: cover; 
+}
+@media (max-width: 768px) {
+  .jumbotronAbout{
+    width: 100%;
+    height: auto;
+  }
+}
+
+  /* --- End Of Jumbotron CSS --- */
+  /* --- Start Of Steps CSS --- */
+  .about-section {
+    margin: 4rem auto;
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+  }
+  .about-icons {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+  }
+  .style2 {
+    margin: 0 auto;
+    height: 60px;
+    width: 3px;
+    color: grey;
+    background: grey;
+  }
+  .description  {
+      display: inline-block;
+      background: transparent;
+      width: 60%;
+      height: auto;
+      margin-left: 0;
+      margin-bottom: -40px;
+      padding: 10px 15px;
+  }
+  .description h1 {
+    color: #7BCABB;
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .description h2 {
+    color: #7BCABB;
+  }
+  .description-icon {
+    margin: 5px auto 80px auto;
+  }
+  /* --- End Of Steps CSS --- */
+  /* --- Start Of Process CSS --- */
+  .main-content {
+    margin: 0 auto;
+    padding-left: 15%;
+    padding-right: 15%;
+    max-width: 1170px;
+    max-width: 73.125rem;
+    width: 70%;
+  }
+ 
+  i {
+    margin: 20px auto;
+  }
+  .check .fa {
+    font-size: 90px;
+    color: grey;
+    background: #fff;
+  }
+  .check p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .check{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 4rem;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+  }
+  .check h1{
+    font-size: 2.5rem;
+    color: #7BCABB  ;
+    padding: 5px;
+    margin: 1px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .option {
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    margin-right: 3%;
+    width: 23.3333%;
+    height: auto;
+    float: left;
+    margin-bottom: 1.875rem;
+    text-align: center;
+    color: white;
+  }
+  .optionI{
+    margin: auto; 
+    background: white; 
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    /*left: -10px;*/
+  }
+  .optionI i{
+    position: relative;
+    top:10px
+  }
+  @media (max-width: 768px) {
+    .option {
+      padding-left: 3.5%;
+      padding-right: 3.5%;
+      padding-top: 3.5%;
+      padding-bottom: 3.5%;
+      margin-right: 3%;
+      margin-bottom: 1.875rem;
+      width: 93%;
+      height: auto;
+      color: white;
+      display: block;
+    }  
+  }
+  @media only screen and (max-width: 500px) {
+    .option {
+      float: left;
+      color: white;
+    } 
+    .check p {
+      text-align: left;
+      font-size: 16px;
+      padding: 10px;
+    }
+    .optionI{
+      position: static;
+    }
+  }
+  /* --- End Of Process CSS --- */
+  .photo {
+    width: 100%;
+    height: 200px;
+    margin: 30px auto;
+    opacity: 0.8;
+    margin-left: 0%;
+    background: #14181E url(../images/business.jpeg) no-repeat 50% 50%;
+    display: table;
+    background-size: cover;
+}
+.photo .content {
+    font-weight: 100;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    width: 100%;
+    height: 150px;
+     padding-top: 50px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+@media only screen and (max-width: 500px){
+  .photo p {
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 0px;
+  }
+}
+  /* --- Start Of Review CSS --- */
+  .review{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    margin: 100px 0px;
+  }
+  .rPic{
+    text-align: right;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 40%;
+    display: block;   
+  }
+  .rLine{
+    width: 50%;
+    height: 18px;
+    background: #a0a0a0;
+    margin: 30px 0px 70px 0px;
+  }
+  .rText{
+    flex: 1 1 1e-09px;
+    box-sizing: border-box;
+    display: block; 
+  }
+  .rText h1{
+    font-size: 2.5rem;
+    color: #7BCABB;
+    width: 47%
+  }
+  .rText p{
+    padding:20px 0px 0px 10%;
+    width:60%;
+    z-index: 2;
+    position:relative;
+    font-size: 1.4rem;
+  }
+  .rShadwo{
+    height: 72%;
+    width: 110%;
+    background: rgba(223, 226, 219, 0.66);
+    position: relative;
+    left: 95%;
+    bottom: 59%;
+    z-index: -1;
+  }
+  span i{
+    margin: 0
+  }
+  .founder{
+    display: block;
+    font-weight:bold;
+    padding:10px 0px 0px 22%
+  }
+  .titleF{
+    display:block;
+     padding:0px 40px
+  }
+  @media (max-width: 1070px) {
+    .rPic{
+      text-align: center;
+      flex: 1 1 100%;
+      box-sizing: border-box;
+      display: block;
+      max-height: 40%;   
+    }
+    .rPic img{
+      width: 80%
+    }
+    .rShadwo{
+      display: none
+    }
+    .rText h1{
+      margin: 0 auto;
+      width: 75%;
+    }
+    .rText p{
+      margin: 0 auto;
+      width: 80%;
+      background: rgba(223, 226, 219, 0.66);
+      padding: 10px;
+    }
+  }
+  @media (max-width: 768px){
+    .review{
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+    .rPic{
+      max-width: 100%;
+    }
+    .titleF{
+      display:block;
+       padding:0px;
+       text-align: center
+    }
+
+  }
+  /* --- End Of Review CSS --- */
+  .meeting {
+    width: 100%;
+    height: 300px;
+    margin-top: auto;
+    margin-right: 0;
+    margin-left: 0;
+    opacity: 0.8;
+    background: #14181E url(../images/meeting.jpg) no-repeat 50% 50%;
+    display: table;
+    background-size: cover;
+}
+.meeting .content {
+    font-weight: 100;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    width: 100%;
+    height: 300px;
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative;
+}
+.content a{
+  top: 40%;
+  position: relative;
+  background: #7BCABB;
+  color: white;
+  padding: 15px 50px;
+  font-size: 1.6rem;
+  border-radius: 18px;
+}
+/* ---------------- End Of About CSS ---------------- */
+/* ---------------- Start Of Contact CSS ---------------- */
+.container-contact {
+  margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.bg-contact {
+      width: 100%;
+      height: 100%;
+      min-height: 550px;
+      margin-top: auto;
+      margin-right: 20px;
+     
+}
+.bg-contact .content{
+    font-weight: 100;
+    color: white;
+    padding: 0% 5%;
+    width: 90%;
+    height: 95%;
+    min-height: 520px;
+    overflow: hidden;
+    margin: 0;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0px;
+}
+#map {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+.bg-contact .content h1 {
+  color: #7BCABB;
+  font-size: 4rem;
+  margin: 0px;
+  letter-spacing: 5px;
+}
+form {
+    border-radius: 5px;
+    max-width: 700px;
+    width: 100%;
+    margin: 2% auto;
+    background-color: transparent;
+    overflow: hidden;}
+#contact-form h1 {
+  color: #7BCABB;
+  font-size: 4rem;
+  margin: 15px auto 10px auto;
+  letter-spacing: 5px;
+  text-align: center;
+}
+#contact-form .primary-button {
+background-color: #7BCABB;
+  color: #fff;
+  padding: 8px 60px;
+  border-radius: 20px;
+  font-size: 2rem;
+  border-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-contact .content p  {
+  width: 90%;
+  font-size: 20px;
+}
+#contact-form .primary-contact-button {
+  background-color: #7BCABB;
+   color: #fff;
+   padding: 8px 50px;
+   border-radius: 20px;
+   font-size: 2rem;
+   border-color: transparent; 
+   margin: 30px auto;
+   width: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ .form-group {
+  overflow: hidden;
+  clear: both;
+}
+.contentform {
+  padding: 10px 20px;
+}
+.leftcontact {
+  width:49.5%; 
+  float:left;
+  box-sizing: border-box;
+  padding: 0px 15px 0px 0px;
+}
+.rightcontact {
+  width:49.5%;
+  float:right;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 15px;
+}
+.map {
+  margin: 40px auto;
+}
+.form-group input[type="text"] {
+    border-radius: 0px 0px 0px 0px;
+    border: none;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+    width: 90%;
+    height: 40px;
+    float: left;
+    padding: 0% 5%;
+    background: #D9E3E1;
+}
+.form-group input[type="email"] {
+    border-radius: 0px 0px 0px 0px;
+    border: none;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+    width: 96%;
+    height: 40px;
+    float: left;
+    padding: 0% 2%;
+    background: #D9E3E1;
+}
+.modal-part1 input[type="email"]{
+  border-radius: 0px 0px 0px 0px;
+  border: none;
+  border-bottom:  2px solid #fff;
+  margin-bottom: 15px;
+  width: 90%;
+  height: 40px;
+  float: left;
+  padding: 0% 2%;
+  background: transparent;
+}
+.modal-part1 input[type="password"] {
+  border-radius: 0px 0px 0px 0px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 15px;
+  width: 90%;
+  height: 40px;
+  float: left;
+  padding: 0% 2%;
+  background: transparent;
+}
+.modal-part2 input[type="email"]{
+  border-radius: 0px 0px 0px 0px;
+  border: none;
+  border-bottom:  2px solid #7BCABB;
+  margin-bottom: 15px;
+  width: 90%;
+  height: 40px;
+  float: left;
+  padding: 0% 2%;
+  background: transparent;
+}
+.modal-part2 input[type="password"] {
+  border-radius: 0px 0px 0px 0px;
+  border: none;
+  border-bottom: 2px solid #7BCABB;
+  margin-bottom: 15px;
+  width: 90%;
+  height: 40px;
+  float: left;
+  padding: 0% 2%;
+  background: transparent;
+}
+.modal-part2 input[type="text"] {
+  border-radius: 0px 0px 0px 0px;
+  border: none;
+  border-bottom: 2px solid #7BCABB;
+  margin-bottom: 15px;
+  width: 90%;
+  height: 40px;
+  float: left;
+  padding: 0% 2%;
+  background: transparent;
+}
+input:focus {
+  outline: none;
+}
+
+.register input[type="email"] {
+  border-bottom: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 15px;
+  width: 80%;
+  height: 40px;
+  text-align: left;
+  padding: 0% 5%;
+  color: #fff;
+  background: #7BCABB;
+}
+.register input[type="password"] {
+border-bottom: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 15px;
+  width: 80%;
+  height: 40px;
+  text-align: left;
+  padding: 0% 5%;
+  color: #fff;
+  background: #7BCABB;
+}
+.register input[type="submit"] {
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  margin-top: 15px;
+  width: 80%;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  padding: 5%;
+  color: #fff;
+  background: #7BCABB;
+}
+.register input::placeholder, .register a{
+color: #fff;
+font-size: 16px;
+}
+.register h1 {
+color: #fff;
+letter-spacing: 2px;
+}
+textarea {
+border-radius: 0px 5px 5px 0px;
+border: 1px solid #EEE;
+margin: 0;
+width: 96%;
+float: left;
+padding: 2% 2%;
+background: #D9E3E1;
+}
+
+@media only screen and (max-width: 500px) {  
+  .bg-contact .content h1 {
+    color: #7BCABB;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    margin: 10px auto;
+    /*margin-top: 1rem;*/
+  }
+  #contact-form .primary-contact-button {
+    background-color: #7BCABB;
+     color: #fff;
+     padding: 8px 60px;
+     border-radius: 0px;
+     font-size: 2rem;
+     border-color: transparent;
+     width: 100%;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0;
+  }
+}
+/* ---------------- End Of Contact CSS ---------------- */
+
+
+
+/* ----------- Phone Screen ----------- */
+        /* Portrait */
+        @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 640px)
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: portrait) {
+           
+    
+        }
+       /* Landscape */
+        @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 750px)
+        and (orientation: landscape) {
+          
+        }
+/* ----------- Tablet ----------- */
+         /* Portrait */
+         @media only screen 
+         and (min-device-width: 690px) 
+         and (max-device-width: 1199px) 
+         and (orientation: portrait) {
+           
+        }
+       /* Landscape */ 
+        @media only screen 
+        and (min-device-width: 690px) 
+        and (max-device-width: 1199px) 
+        and (orientation: landscape) {
+           
+        }
+/* ----------- Laptop ----------- */
+        @media screen 
+        and (min-device-width: 1200px) 
+        and (max-device-width: 1600px){
+
+        }
+
+/*  --------- Adding CSS for the arrow ------------*/
+#go-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 600;
+  display: none;
+}
+#go-top a {
+  text-decoration: none;
+  border: 0 none;
+  display: block;
+  height: 66px;
+  width: 60px;
+  line-height: 66px;
+  text-align: center;
+  background: rgba(0,0,0,0.3);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 5px;
+}
+#go-top a i {
+  font-size: 50px;
+  line-height: inherit;
+}
+#go-top a:hover {
+  background: #7BCABB;
+  color: #FFFFFF;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #7BCABB;
+  font-size: 1.2rem
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #7BCABB;
+  font-size: 1.2rem
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #7BCABB;
+  font-size: 1.2rem
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #7BCABB;
+  font-size: 1.2rem
+}
+.signIn ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+.signIn ::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+.signIn :-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+.signIn :-moz-placeholder { /* Firefox 18- */
+  color: white;
+}

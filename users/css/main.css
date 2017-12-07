@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+html, body {
+	margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+	background-color: #FFFFFF;
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 6px;
+  line-height: 36px;
+  min-width: 88px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+.clear{
+  clear: both;
+}
+/* ---- Start Of Header CSS ---- */
+.menu {
+  display: flex;
+  height: 10vh;
+  background: #7BCABB;
+}
+.menu .logo-container .logo {
+  opacity: 1;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+.menu .nav-container {
+flex: 1;
+}
+.logo-container a{
+  font-size: 2em;
+}
+.menu .my-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 400;
+    font-size: 16px;
+    height: 10vh;
+    margin: 0;
+    align-items: center;
+}
+#fausercircle{
+  font-size: 50px;
+}
+
+ /* --- Start Of Jumbotron CSS --- */
+ .jumbotron{
+  background: #7BCABB;
+  width: 100%;
+  height: 90vh;
+  background: #7BCABB
+}
+.space{
+  display: inline-block;
+  width: 6%;
+  height: 90vh;
+}
+.jumbotronHome{
+  display: inline-block;
+  width: 93.7%;
+  height: 90vh;
+  background: #14181E url(../images/user-background.jpg) no-repeat 50% 50%;
+  background-size: cover; 
+}
+.decore{
+  width: 20%;
+  height: 3vh;
+  background: #a0a0a0;
+  position: relative;
+  left: -6.7%;
+  top: 19vh
+}
+.textJ{
+  position: absolute;
+  top: 30vh;
+  margin: 0 20px;
+}
+.textJ h1{
+  color: #7BCABB;
+  font-size: 4rem;
+  letter-spacing: 5px;
+}
+.textJ p{
+  font-size: 1.6rem;
+  width: 50%;
+  color: #FFFFFF;
+}
+.textJ a{
+  background: #7BCABB;
+  color: white;
+  width: 25%;
+  padding: 10px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 18px
+}
+@media (max-width: 1006px) {
+  .space{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .decore{
+    display: none
+  }
+  .jumbotron{
+    height: auto;
+  }
+  .jumbotronHome{
+    width: 100%;
+    height: auto;
+  }
+  .textJ{
+    position: relative;
+    top: 0vh;
+    margin: 0
+  }
+  .textJ h1{
+    font-size: 2.8rem;
+    margin: 30px 20px ;    
+    letter-spacing: 4px;
+  }
+  .textJ p{
+    font-size: 1.4rem;
+    margin: 5px 0px 40% 20px;
+    width: 80%;
+    color: #FFFFFF;
+  }
+  .textJ a{
+    color: white;
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 0px;
+    margin: 0;
+  }
+}
+  /* --- End Of Jumbotron CSS --- */
+  /* --- Start Of Best Hosts CSS --- */
+  .bestHosts, .hostMenu , .accoMenu{
+    width: 100%;
+    margin: 80px 0
+  }
+  .bestHosts h1, .hostMenu h1, .accoMenu h1{
+    margin-left: 4%;
+    color: #7BCABB;
+    font-size: 4rem;
+    display: inline-block;
+    padding: 0
+  }
+  .bestHosts p, .hostMenu p, .accoMenu p{
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-left: 1.5%;
+    padding: 0
+  }
+   .hostname{
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    top: 80px;
+    color: white;
+    text-align: center;
+  }
+  .host1{
+    width: 44%;
+    height: 65vh;
+    float: left;
+    margin-left: 4%;
+    background: #14181E url(../images/besthost1.jpg) no-repeat 50% 50%;
+    background-size: cover; 
+  }
+  .host2{
+    width: 44%;
+    height: 65vh;
+    float: right;
+    margin-right: 4%;
+    background: #14181E url(../images/besthost2.jpeg) no-repeat 50% 50%;
+    background-size: cover; 
+  }
+  .hostShadowB{
+    width: 100%;
+    height: 65vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none
+  }
+  .host1:hover .hostShadowB, .host2:hover .hostShadowB{
+    display: inline-block
+  }
+  .point1 {
+    position: relative;
+    color: #fff;
+    font-size: 1.5rem;
+    top: 43vh;
+    margin-left: 10px
+  }
+  .point2 {
+    position: relative;
+    color: #fff;
+    font-size: 1.5rem;
+    top: 43vh;
+    margin-left: 10px    
+  }
+  .hosts, .accommo{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 95%;
+    margin: auto;
+  }
+  .hosts .host, .accommo .acco {
+    display: inline-block;
+    width: 210px;
+    height: 250px;
+    background: gray;
+    margin: 30px;
+    position: relative;
+  }
+
+  .hostShadow{
+    width: 210px;
+    height: 250px;
+    background: rgba(123, 202, 186, 0.514);
+    
+  }
+
+  .host:hover .hostShadow, .acco:hover .hostShadow{
+    display: block;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .bestHosts h1,.bestHosts p ,
+    .hostMenu h1, .hostMenu p,
+    .accoMenu h1, .accoMenu p{
+      display: block;
+      text-align: center;
+    }
+    .host1, .host2{
+      float: none;
+      width: 90%;
+      margin: 10px auto;
+      height: 400px;
+    }
+    .hostShadowB{
+      display: inline-block;
+      height: 400px;
+    }
+    .point1, .point2{
+      top: 200px
+    }
+
+    .accoMenu h1{
+      font-size: 2rem
+    }
+    
+  }
+  /* --- End Of Best Hosts CSS --- */
+  /* ---------------- Start Of Footer CSS ---------------- */
+
+.footer-part1 {
+  width: 90%;
+  padding: 1% 5%;
+  text-align: left;
+  margin-top: 10vh
+}
+.logo_gloubuzzer {
+  margin: 30px 0 0 0;
+  position: relative;
+  left: 114px;
+  bottom: 30px;
+}
+.footer{
+display: flex;
+box-sizing: border-box;
+flex-direction: row;
+background: #7BCABB;
+color: #434c49;
+}
+.footer-list{
+  list-style: none;
+}
+.footerA{
+flex: 1 1 100%;
+box-sizing: border-box;
+max-width: 35%;
+}
+.footerA ul{
+list-style-type: none;
+}
+.footerA ul li a{
+color: #434c49;  
+}
+.footerB{
+flex: 1 1 100%;
+box-sizing: border-box;
+max-width: 65%;
+}
+.social{
+position: relative;
+text-align: right;
+right: 20px;
+top: 15px;
+}
+.textS {
+position: relative;
+text-align: right;
+right: 20px;
+top: 75px;
+}
+/*  --------- Adding CSS for the arrow ------------*/
+#go-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 600;
+  display: none;
+}
+#go-top a {
+  text-decoration: none;
+  border: 0 none;
+  display: block;
+  height: 66px;
+  width: 60px;
+  line-height: 66px;
+  text-align: center;
+  background: rgba(0,0,0,0.3);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 5px;
+}
+#go-top a i {
+  font-size: 50px;
+  line-height: inherit;
+}
+#go-top a:hover {
+  background: #7BCABB;
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px){
+.footerA ul{
+  padding-left: 3px
+}
+}
+/* ---------------- End Of Footer CSS ---------------- */
+
+  
+  /* --- Scroll style --- */
+  body::-webkit-scrollbar-track, .hosts::-webkit-scrollbar-track, .accommo::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  
+  body::-webkit-scrollbar, .hosts::-webkit-scrollbar, .accommo::-webkit-scrollbar
+  {
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+  
+  body::-webkit-scrollbar-thumb, .hosts::-webkit-scrollbar-thumb, .accommo::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #7BCABB;
+  }
+
+ 
+  /* just move this for main.css in landing page ;)
+
+   body::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  
+  body::-webkit-scrollbar
+  {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+  
+  body::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #7BCABB;
+  } 
+
+  */
