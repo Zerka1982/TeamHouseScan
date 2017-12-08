@@ -1,7 +1,7 @@
-<!--  *******Header*******  -->
-<?php 
-include "src/header.php";
- ?>
+<?php
+	include_once "../php/session.php";
+	include_once "src/header.php";
+?>
 
     <!--  *******Jumbotron*******  -->
     <div class="jumbotron">
@@ -76,7 +76,11 @@ include "src/header.php";
             <div class="acco"><div class="hostShadow"></div></div>            
         </div>
     </div>
-    
+	
+	<script>
+		console.log( "Session status (NONE: 1, ACTIVE: 2): " + '<?php echo( session_status() ); ?>' );
+		console.log( "user_id: " + '<?php echo( $_SESSION[ 'user_id' ]) ?>' );
+	</script>
   <!-- footer
    ================================================== -->
  <?php 

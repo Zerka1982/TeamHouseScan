@@ -26,7 +26,6 @@
 
 .navigation {
 	width: 20%;
-  min-width: 200px;
 	background: #7BCABB;
 }
 
@@ -49,16 +48,18 @@
 
 .input_data {
   padding-left: 55px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .input_form {
   display: grid;
+
+
 }
 
 label {
   grid-column: 1 / 2;
-  width: 80px;
+  width: 150px;
   padding-bottom: 6px;
   padding-top: 6px;
   color: grey;
@@ -66,7 +67,7 @@ label {
 
 input {
   grid-column: 2 / 3;
-  width: 150px;
+  width: 200px;
   border: 1px solid lightgrey;
   border-radius: 5px;
   margin: 3px;
@@ -88,7 +89,7 @@ input {
 
 .optional {
   background: white;
-  margin-top: 30px;
+  height: 40%;
 }
 
 .optional_text {
@@ -98,29 +99,9 @@ input {
   font-size: 20px;
 }
 
-.input_location {
-
-}
-
 .location_form {
-  display: grid;
-  padding-left: 55px;
-}
-
-textarea {
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-  margin: 3px;
-  padding-left: 5px;
-  width: 80%;
-}
-
-.save {
-  background-color: #4f4b4b;
-  color: white;
-  font-size: 12px;
-  padding: 10px 28px;
-  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .navMenu {

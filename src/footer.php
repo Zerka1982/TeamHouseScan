@@ -18,7 +18,7 @@
           <li><a href="index">HOME</a></li>
           <li><a href="about">About</a></li>
           <li><a href="contact">Contact</a></li>
-          <li id="singIn"><a href="#">Sign In</a></li>
+          <li id="singIn"><a href="#">Log In</a></li>
         </ul>
       </div>
       <div class="footerB">

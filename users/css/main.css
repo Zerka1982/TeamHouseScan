@@ -168,16 +168,6 @@ flex: 1;
     margin-left: 1.5%;
     padding: 0
   }
-   .hostname{
-    display: block;
-    position: absolute;
-    left: 0px;
-    right: 0;
-    bottom: 0;
-    top: 80px;
-    color: white;
-    text-align: center;
-  }
   .host1{
     width: 44%;
     height: 65vh;
@@ -230,9 +220,7 @@ flex: 1;
     height: 250px;
     background: gray;
     margin: 30px;
-    position: relative;
   }
-
   .hostShadow{
     width: 210px;
     height: 250px;
@@ -244,7 +232,6 @@ flex: 1;
     display: block;
     opacity: 0.7;
   }
-
   @media (max-width: 768px) {
     .bestHosts h1,.bestHosts p ,
     .hostMenu h1, .hostMenu p,

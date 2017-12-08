@@ -92,7 +92,7 @@ $mysqli->close();
 
 // Success response
 header( "HTTP/1.1 200 OK" );
-//header( 'Location: ../users/user-landing.php' );
+header( 'Location: ../users/user-profile.php' );
 echo "success<br>user_id: " . $_SESSION[ 'user_id' ]. "<br>affected rows: " . $rows;
 
 exit();
