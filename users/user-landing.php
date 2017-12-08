@@ -1,7 +1,7 @@
-<!--  *******Header*******  -->
-<?php 
-include "src/header.php";
- ?>
+<?php
+	include_once "../php/session.php";
+	include_once "src/header.php";
+?>
 
  <div id="landing-user"></div>
 
@@ -147,8 +147,12 @@ include "src/header.php";
           )
       }
                ReactDOM.render(<HomePage/>, document.getElementById('landing-user'));
-</script>
+	</script>
 
+	<script>
+		console.log( "Session status (NONE: 1, ACTIVE: 2): " + '<?php echo( session_status() ); ?>' );
+		console.log( "user_id: " + '<?php echo( $_SESSION[ 'user_id' ]) ?>' );
+	</script>
 
 <!-- footer
    ================================================== -->

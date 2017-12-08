@@ -5,6 +5,7 @@
    <link href="http://vjs.zencdn.net/6.2.0/video-js.css" rel="stylesheet">
    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.min.js"></script>
+   
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
@@ -16,6 +17,7 @@
    ================================================== -->
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
    <meta name="viewport" content="width=320">
+   
    <!-- CSS
    ================================================== -->
    <link rel="stylesheet" href="css/main.css">
@@ -57,8 +59,8 @@
           <li class="list-item"><a href="index">Home</a></li>
           <li class="list-item"><a href="about">About</a></li>
           <li class="list-item"><a href="contact">Contact</a></li>
-          <li id="singIn" class="list-item"><a href="#">Sign in</a></li>
-          <li id="singInM" class="list-item"><a href="#">Sign in</a></li>
+          <li id="singIn" class="list-item"><a href="#">Log in</a></li>
+          <li id="singInM" class="list-item"><a href="#">Log in</a></li>
           <li id="singUpM" class="list-item"><a href="#">Sign up</a></li>
 
           </ul>
@@ -67,36 +69,47 @@
            <a href="#" style="padding:0"><i class="fa fa-bars fa-2x"  aria-hidden="true"></i></a>
         </div>
         
-        <form>
+
         <div id="myModal" class="modal">
+
        <!-- Modal content -->
           <div class="modal-content">
             
+            <!-- Log in -->
             <div id="part1" class="modal-part1">
               <h2>Have you registred?</h2>
               <div class="signIn">
-                <input type="email" name="emailid" placeholder="E-mail">
-                <input type="password" name="passwordid" placeholder="Password">
-                <a href="">Forgot password?</a><br>
-                <a class="primary-button" href="#">Sign in</a><br>
-                <a id="closeM" class="primary-button" href="#">Cancel</a>
+              	<form id='logInForm' method='post' action='php/log_in.php'>
+                	<input type="email" name="user_email" placeholder="E-mail" autofocus>
+                	<input type="password" name="user_password" placeholder="Password">
+                	<a href="">Forgot password?</a><br>
+                	<a class="primary-button">
+                		<button name="signInButton" type="submit" form="logInForm">Log in</button>
+                	</a><br>
+                	<a id="closeM" class="primary-button" href="#">Cancel</a>
+                </form>
               </div>
             </div>
-
+						
+						<!-- Sign up -->
             <div id="part2" class="modal-part2">
               <h2>Not a member?</h2>
               <div>
-                <div class="signIn-part">
-                  <input type="email" name="emailid" placeholder="E-mail">
-                  <input type="password" name="passwordid" placeholder="Password">
-                </div>
-                <div class="signIn-part">
-                  <input type="text" name="firstname" placeholder="First Name">
-                  <input type="text" name="lastname" placeholder="Last Name">
-                </div>
+              	<form id='signUpForm' method='post' action='php/sign_up.php'>
+                	<div class="signIn-part">
+                	  <input type="email" id="emailid" name="user_email" placeholder="E-mail">
+                	  <input type="password" id="passwordid" name="user_password" placeholder="Password">
+                	</div>
+                	<div class="signIn-part">
+                	  <input type="text" id="firstname" name="user_first_name" placeholder="First Name">
+                	  <input type="text" id="lastname" name="user_last_name" placeholder="Last Name">
+                	</div>
+                </form>
               </div>
               <div class="buttons-side">
-                <a class="modal-prm-btn " href="">Sign In</a>
+                <a class="modal-prm-btn">
+                	<button name="signUpButton" type="submit" form="signUpForm">Sign up</button>
+                </a>
                 <a class="modal-prm-btn socialF" href="">Log in with <i class="fa fa-facebook-square" aria-hidden="true"></i></a>
                 <a class="modal-prm-btn socialG" id="#signUpButton" href="">Log in with <i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
               </div>
@@ -104,8 +117,9 @@
             </div>
             
             </div>
+             
       </div>
-      </form>
+      
          
    </div> <!-- /header --> 
     

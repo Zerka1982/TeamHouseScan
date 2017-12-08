@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
 
 
 html, body {
@@ -7,8 +7,8 @@ html, body {
   height: 100%;
   width: 100%;
 	background-color: #FFFFFF;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
 }
 .clear {
   clear: both;
@@ -45,7 +45,7 @@ a {
     height: 10vh;
     margin: 0;
     align-items: center;
-    font-family: "Roboto";
+    font-family: "Questrial" ,sans-serif;
 }
 .menu a {
     color: #fff;
@@ -458,10 +458,9 @@ cursor: pointer;
   }
   .textJ p{
     font-size: 1.4rem;
-    margin: 25% auto 30% auto;
+    margin: 5px 0px 40% 20px;
     width: 80%;
     color: #FFFFFF;
-    text-align: left;
   }
   .textJ a{
     color: white;
@@ -495,7 +494,7 @@ cursor: pointer;
     margin: 1px auto;
     text-align: center;
     letter-spacing: 5px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Questrial", sans-serif;
   }
   .works p{
     font-size: 16px;
@@ -503,7 +502,6 @@ cursor: pointer;
     font-weight: bold;
     margin: 1px auto; 
     text-align: center;
-    width: 50%;
   }
   .works .inner .content {
     margin: 5px auto;
@@ -552,11 +550,10 @@ cursor: pointer;
     }
     .works p {
       font-size: 18px;
-      margin: 0 auto 30px auto;
+      margin: auto;
       padding: 10px 20px;
       text-align: left;
       color: #fff;
-      width: 80%;
     }
     #circle {
         display: none;
@@ -575,7 +572,8 @@ cursor: pointer;
       padding: 25px;
       font-weight: bold;
       margin:  auto; 
-      text-align: center;
+      text-align: left;
+      word-spacing: 140px;
     }
     .works {
       width: 96%;
@@ -636,7 +634,7 @@ cursor: pointer;
     margin: 1px;
     text-align: center;
     letter-spacing: 5px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Questrial", sans-serif;
 }
 
 .site p {
@@ -822,12 +820,12 @@ cursor: pointer;
   }
   @media (max-width: 768px) {
     .part1 p {
-      font-family: "Roboto", sans-serif;
+      font-family: "Questrial", sans-serif;
       font-size: 14px;
       padding-left: 50px;
     }
     .part1 h1 {
-      font-family: "Roboto", sans-serif;
+      font-family: "Questrial", sans-serif;
       font-size: 1rem;
       color: #7BCABB;
       padding-left: 20px;
@@ -882,7 +880,7 @@ cursor: pointer;
       font-size: 1.8rem;
     }
     .part1 p {
-      font-family: "Roboto", sans-serif;
+      font-family: "Questrial", sans-serif;
       font-size: 18px;
       padding-left: 0px;
       margin-bottom: -20px;
@@ -1023,7 +1021,7 @@ cursor: pointer;
     margin: 1px;
     text-align: center;
     letter-spacing: 5px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Questrial", sans-serif;
   }
   
   .option {
@@ -1046,7 +1044,7 @@ cursor: pointer;
     height: 150px;
     border-radius: 50%;
     position: relative;
-    /*left: -10px;*/
+    left: -10px;
   }
   .optionI i{
     position: relative;
