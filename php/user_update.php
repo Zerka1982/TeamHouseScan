@@ -12,17 +12,46 @@ $stmt = $mysqli->prepare("
 	UPDATE User
 	SET email = ?,
 			fname = ?,
-			lname = ?
+			lname = ?,
+			sex = ?,
+			birthday = ?,
+			phone = ?,
+			location = ?,
+			country = ?,
+			introduction = ?
 	WHERE user_id = ?
 ");
 
-$stmt->bind_param( "sssi", $email, $fname, $lname, $user_id );
+$stmt->bind_param( "sssssssssi", $email, $fname, $lname, $sex, $birthday, $phone, $location, $country, $introduction, $user_id );
 
-$email = "toad2@globuzzer.com";
+// Sanitize form data
+$email = $_POST[ 'email' ];
+$email = trim( $email );
 
-$fname = "Frog";
+$fname = $_POST[ 'first_name' ];
+$fname = trim( $fname );
+$fname = stripslashes( $fname );
+$fname = mysqli_real_escape_string( $mysqli, $fname );
 
-$lname = "Frogsson";
+$lname = $_POST[ 'last_name' ];
+$lname = trim( $lname );
+
+$sex = $_POST[ 'sex' ];
+$sex = trim( $sex );
+
+$birthday = $_POST[ 'birthday' ];
+$birthday = trim( $birthday );
+
+$phone = $_POST[ 'mobile' ];
+$phone = trim( $phone );
+
+$location = $_POST[ 'location' ];
+$location = trim( $location );
+
+$country = $_POST[ 'country' ];
+$country = trim( $country );
+
+$introduction = $_POST[ 'introduction' ];
 
 $user_id = $_SESSION[ 'user_id' ];
 
