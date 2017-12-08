@@ -1,0 +1,181 @@
+.myprofile {
+	background: #7BCABB;
+  width: 100%;
+  height: 80px;
+	color: white;
+	display: flex;
+	padding-top: 50px;
+	justify-content: space-between;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.myprofile_text {
+	margin-left: 9%;
+}
+
+.button {
+	background: url(../images/icon/exit_button3.png) no-repeat;
+}
+
+.profileBody {
+	display: flex;
+  justify-content: space-around;
+	height: 600px;
+}
+
+.navigation {
+	width: 20%;
+  min-width: 200px;
+	background: #7BCABB;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+
+.information {
+	background: white;
+  height: 50%;
+}
+
+.info_text {
+  color: #7BCABB;
+  padding: 35px;
+  font-size: 20px;
+}
+
+.input_data {
+  padding-left: 55px;
+  margin-bottom: 30px;
+}
+
+.input_form {
+  display: grid;
+}
+
+label {
+  grid-column: 1 / 2;
+  width: 80px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  color: grey;
+}
+
+input {
+  grid-column: 2 / 3;
+  width: 150px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 3px;
+  padding-left: 5px;
+}
+
+.sex_option {
+  width: 126px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 3px;
+  padding-left: 5px;
+}
+
+
+.birthday_input {
+  width: 120px;
+}
+
+.optional {
+  background: white;
+  margin-top: 30px;
+}
+
+.optional_text {
+  color: #7BCABB;
+  padding: 35px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.input_location {
+
+}
+
+.location_form {
+  display: grid;
+  padding-left: 55px;
+}
+
+textarea {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 3px;
+  padding-left: 5px;
+  width: 80%;
+}
+
+.save {
+  background-color: #4f4b4b;
+  color: white;
+  font-size: 12px;
+  padding: 10px 28px;
+  border-radius: 30px;
+}
+
+.navMenu {
+	display: flex;
+  flex-direction: column;
+	color: black;
+}
+
+.Pic_Name_Location {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 30px;
+  padding-top: 15px;
+}
+
+.profile_pic {
+	padding-bottom: 25%;
+}
+
+.profile_name {
+  margin: 5px;
+	font-size: 18px;
+}
+
+.profile_location {
+  font-size: 11px;
+}
+
+.nav_my_request {
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 15px;
+	font-size: 18px
+}
+
+.nav_message {
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 15px;
+	font-size: 18px
+}
+
+.white_line {
+	width: 90%;
+  height: 1px;
+  background: white;
+	left: 2%;
+  position: relative;
+}
+
+.grey_line {
+  width: 90%;
+  height: 2px;
+  background: lightgrey;
+	left: 5%;
+  position: relative;
+}
