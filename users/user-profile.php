@@ -1,7 +1,6 @@
 <?php
 	include_once "../php/session.php";
 	include_once "src/header.php";
-	//include "../php/profile.php";
 	
 	require_once '../php/user_retrieve.php';	
 	user_retrieve();
@@ -86,11 +85,13 @@
 	
 	function UserProfileForm() {
 		return (
-			<form className="userProfileForm" method='post' action='../php/user_update.php'>
-				<Information />
-				<Optional />
-				<input className="save" type="submit" value="Save"/>
-			</form>
+			<div className="info">
+				<form className="userProfileForm" method='post' action='../php/user_update.php'>
+					<Information />
+					<Optional />
+					<input className="save" type="submit" value="Save"/>
+				</form>
+			</div>
 	)}
 	
   function HomePage(){
