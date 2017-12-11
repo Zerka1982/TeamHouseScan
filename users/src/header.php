@@ -25,6 +25,7 @@
   <!-- CSS
   ================================================== -->
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/font-awesome.css">
 	<!--     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">

@@ -18,7 +18,7 @@ function user_retrieve() {
 	error_reporting(~0);
 	
 	$query = "
-		SELECT user_id, email, fname, lname, sex, birthday, phone, location, country, introduction, picture_url
+		SELECT user_id, email, fname, lname, sex, birthday, phone, location, country, introduction
 		FROM User
 		WHERE user_id = ?
 	";
@@ -47,7 +47,7 @@ function user_retrieve() {
 		exit();
 	}
 	
-	$stmt->bind_result( $user_id, $email, $fname, $lname, $sex, $birthday, $phone, $location, $country, $introduction, $picture_url );
+	$stmt->bind_result( $user_id, $email, $fname, $lname, $sex, $birthday, $phone, $location, $country, $introduction );
 	
 	if( !$stmt->fetch()) {
 		echo "User not found.";
@@ -67,7 +67,6 @@ function user_retrieve() {
 	$_SESSION[ 'location' ] = $location;
 	$_SESSION[ 'country' ] = $country;
 	$_SESSION[ 'introduction' ] = $introduction;
-	$_SESSION[ 'picture_url' ] = $picture_url;
 	
 	$stmt->close();
 	$mysqli->close();

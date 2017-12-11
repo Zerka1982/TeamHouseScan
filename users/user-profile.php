@@ -1,10 +1,10 @@
 <?php
 	include_once "../php/session.php";
-	include_once "src/header.php";
-	//include "../php/profile.php";
 	
 	require_once '../php/user_retrieve.php';	
 	user_retrieve();
+
+	include "src/header.php";
 ?>
 
 <div id="user-profile"></div>
@@ -14,12 +14,12 @@
   function Top() {
      return (
 
-       <div className="myprofile">
-         <div className="myprofile_text">
-            <h2>My Profile</h2>
-          </div>
-         <a href="user-landing.php" className="button"></a>
-       </div>
+				<div className="myprofile">
+					<div className="myprofile_text">
+						<h2>My Profile</h2>
+					</div>
+					<a href="user-landing.php" className="button"></a>
+				</div>
 
   )}
 
@@ -28,7 +28,7 @@
       <div className="navMenu">
         <div className="white_line"></div>
         <div className="Pic_Name_Location">
-          <img className="profile_pic" src="images/globuzzer.png" alt="profile picture" width="100" height="100"/>
+          <img className="profile_pic" src="images/logo_globuzzer.png" alt="profile picture" width="100" height="100"/>
           <div className="profile_name">Alexander S</div>
           <div className="profile_location">Los Angeles, US</div>
         </div>
@@ -86,11 +86,13 @@
 	
 	function UserProfileForm() {
 		return (
-			<form className="userProfileForm" method='post' action='../php/user_update.php'>
-				<Information />
-				<Optional />
-				<input className="save" type="submit" value="Save"/>
-			</form>
+			<div className="info">
+				<form className="input_form" method='post' action='../php/user_update.php'>
+					<Information />
+					<Optional />
+					<input className="save" type="submit" value="Save"/>
+				</form>
+			</div>
 	)}
 	
   function HomePage(){
