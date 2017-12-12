@@ -1,3 +1,5 @@
+/* the Profile page upper part */
+
 .myprofile {
 	background: #7BCABB;
   width: 100%;
@@ -15,93 +17,21 @@
 }
 
 .button {
-	background: url(../images/icon/exit_button3.png) no-repeat;
+	background: url(../images/icon/exit_button.png) no-repeat;
 }
 
+/*  the Profile page body part */
 .profileBody {
 	display: flex;
-  justify-content: space-around;
 	height: 600px;
 }
 
+/* the navigation on the left side */
+
 .navigation {
 	width: 20%;
+	min-width: 200px;
 	background: #7BCABB;
-}
-
-.info {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-}
-
-.information {
-	background: white;
-  height: 50%;
-}
-
-.info_text {
-  color: #7BCABB;
-  padding: 35px;
-  font-size: 20px;
-}
-
-.input_data {
-  padding-left: 55px;
-  padding-bottom: 30px;
-}
-
-.input_form {
-  display: grid;
-
-
-}
-
-label {
-  grid-column: 1 / 2;
-  width: 150px;
-  padding-bottom: 6px;
-  padding-top: 6px;
-  color: grey;
-}
-
-input {
-  grid-column: 2 / 3;
-  width: 200px;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-  margin: 3px;
-  padding-left: 5px;
-}
-
-.sex_option {
-  width: 126px;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-  margin: 3px;
-  padding-left: 5px;
-}
-
-
-.birthday_input {
-  width: 120px;
-}
-
-.optional {
-  background: white;
-  height: 40%;
-}
-
-.optional_text {
-  color: #7BCABB;
-  padding: 35px;
-  padding-top: 10px;
-  font-size: 20px;
-}
-
-.location_form {
-  display: flex;
-  flex-direction: column;
 }
 
 .navMenu {
@@ -127,10 +57,6 @@ input {
 	font-size: 18px;
 }
 
-.profile_location {
-  font-size: 11px;
-}
-
 .nav_my_request {
 	padding-bottom: 15px;
 	padding-top: 15px;
@@ -144,6 +70,117 @@ input {
 	padding-left: 15px;
 	font-size: 18px
 }
+
+/* the form which contains the input */
+
+.userProfileFormContainer {
+	width: 80%;
+}
+
+/* the information which contains the input for information */
+
+.information {
+	background: white;
+  height: 50%;
+}
+
+.info_text {
+  color: #7BCABB;
+  padding: 35px;
+  font-size: 20px;
+}
+
+.input_data li {
+	display: flex;
+	flex-wrap: wrap;
+  align-items: center;
+	min-width: 500px;
+}
+
+.input_data > li > label,
+.input_data li
+.input_data textarea {
+
+}
+
+.input_form {
+	display: flex;
+  flex-direction: column;
+}
+
+.save_button_li_item {
+  margin-left: 360px;
+}
+
+.input_information {
+	padding-bottom: 20px;
+}
+
+label {
+  width: 150px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  color: grey;
+}
+
+input {
+  width: 200px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 3px;
+  padding-left: 5px;
+}
+
+textarea {
+  width: 300px;
+  border: 1px solid lightgrey;
+	border-radius: 5px;
+	margin: 3px;
+	padding-left: 5px;
+}
+
+.sex_option {
+  width: 126px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 3px;
+  padding-left: 5px;
+}
+
+
+.birthday_input {
+  width: 120px;
+}
+
+/* the optional box which contains the optional input */
+
+.optional {
+  background: white;
+  height: 40%;
+}
+
+.optional_text {
+  color: #7BCABB;
+  padding: 35px;
+  padding-top: 25px;
+  font-size: 20px;
+}
+
+.profile_location {
+  font-size: 11px;
+}
+
+.save {
+  background-color: #4f4b4b;
+  color: white;
+  font-size: 12px;
+  padding: 10px 28px;
+  border-radius: 30px;
+	width: 150px;
+  margin-top: 20px;
+}
+
+/* the decoration lines */
 
 .white_line {
 	width: 90%;
