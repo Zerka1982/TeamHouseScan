@@ -3,7 +3,7 @@
 include_once 'session.php';
 include_once 'db_connect.inc.php';
 
-// Show errors; for user_retrieve
+// Show errors; for debugging
 ini_set('display_errors', 1);
 error_reporting(~0);
 

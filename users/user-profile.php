@@ -68,7 +68,7 @@
      </div>
   )}
 
-  function Optional() {
+	function Optional() {
    return (
      <div className="optional">
        <div className="optional_text">Optional</div>
@@ -82,7 +82,7 @@
            </textarea>
        </div>
      </div>
-   )}
+	)}
 	
 	function UserProfileForm() {
 		return (
@@ -95,8 +95,23 @@
 			</div>
 	)}
 	
-  function HomePage(){
-     return (
+	function UserProfilePictureForm() {
+		return(
+			<div className="info">
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<form className='input_form' method='post' action='../php/pic_upload.php' encType='multipart/form-data'>
+					<label htmlFor='picture'>Change profile picture</label>
+					<input className='' type='file' name='picture' id='picture'/>
+					<input className="save" type="submit" value="Upload"/>
+				</form>
+			</div>
+	)}
+	
+  function HomePage() {
+		return (
        <div>
          <div>
            <Top />
@@ -107,13 +122,14 @@
            </div>
            <div className="userProfileFormContainer">
 						<UserProfileForm />
+						<UserProfilePictureForm />
            </div>
          </div>
        </div>
-         )
-     }
-              ReactDOM.render(<HomePage/>, document.getElementById('user-profile'));
-</script>
+	)}
+	
+  ReactDOM.render(<HomePage/>, document.getElementById('user-profile'));
+	</script>
 	<script>
 		console.log( "Session status (NONE: 1, ACTIVE: 2): " + '<?php echo( session_status() ); ?>' );
 		console.log( "user_id: " + '<?php echo( $_SESSION[ 'user_id' ]) ?>' );
