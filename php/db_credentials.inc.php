@@ -7,4 +7,3 @@ $pwd = 'scan';
 $schema = 'HouseScanner';
 $port = 8889;
 
-?>

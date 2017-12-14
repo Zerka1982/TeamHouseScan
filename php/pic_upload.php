@@ -1,4 +1,9 @@
 <?php
+
+/*
+	This script handles uploading of user profile pictures.
+*/
+
 include_once "../php/session.php";
 
 // Show errors; for debugging
@@ -6,7 +11,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 error_reporting(~0);
 
-// Check that there was actually something uploaded
+// Check that something was actually uploaded
 if( empty( $_FILES ) || !isset( $_FILES['picture']['error'] )){
 	header( 'HTTP/1.1 400 Bad Request' );
 	
@@ -24,17 +29,16 @@ if( $_FILES['picture']['error'] || $_FILES['picture']['error'] != UPLOAD_ERR_OK 
 	exit();
 }
 
-// Determine file name for storage; i.e. profilepic123.jpg for user_id 123
-//$filename = trim( $_FILES['picture']['tmp_name'] );
-
-
-
+// Remove any previous profile pictures
+foreach( glob( '../users/user-pictures/profile-picture' . $_SESSION[ 'user_id' ] . '.*' ) as $deleteMe ){
+	unlink( $deleteMe );
+}
 
 // Move uploaded file to permanent storage
 $filename = 'profile-picture' . $_SESSION[ 'user_id' ];
-$filepath = '../users/user-pictures/' . $filename . pathinfo($_FILES["picture"]["name"])['extension'];
+$filepath = '../users/user-pictures/' . $filename . "." . pathinfo( $_FILES["picture"]["name"])['extension'];
 
-if( !move_uploaded_file( $_FILES['picture']['tmp_name'], $filepath ) ){
+if( !move_uploaded_file( $_FILES['picture']['tmp_name'], $filepath )){	
 	header( 'HTTP/1.1 500 Internal Server Error' );
 	
 	echo "Could not move the uploaded file.";
@@ -49,7 +53,7 @@ header( 'Location: ../users/user-profile.php' );
 echo "File successfully uploaded.";
 
 echo "<br><br>";
-echo $filepath . "<br><br>";
+echo "file uploaded: " . $filepath . "<br><br>";
 var_dump( $_FILES );
 
 exit();

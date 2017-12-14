@@ -1,10 +1,12 @@
 <?php
 
-/*
-	This script creates a new connection to the HouseScanner DB.
-	
-	N.B. that the connection must be closed manually.
-*/
+ /**
+ 	*
+	* This script creates a new connection to the HouseScanner DB.
+	* 
+	* N.B. that the connection must be closed manually.
+	*
+	*/
 
 include_once 'db_credentials.inc.php';
 
@@ -18,5 +20,4 @@ if ( $mysqli->connect_errno ) {
 	$mysqli->close();
 	exit();
 }
-	
-?>
+
