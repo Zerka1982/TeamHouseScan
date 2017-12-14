@@ -94,7 +94,6 @@
 	display: flex;
 	flex-wrap: wrap;
   align-items: center;
-	min-width: 500px;
 }
 
 .input_data > li > label,
