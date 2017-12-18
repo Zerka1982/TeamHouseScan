@@ -1,7 +1,7 @@
 <?php
 	include_once "../php/session.php";
-	
-	require_once '../php/user_retrieve.php';	
+
+	require_once '../php/user_retrieve.php';
 	user_retrieve();
 
 	include "src/header.php";
@@ -154,6 +154,6 @@
 
 <!-- footer
    ================================================== -->
- <?php 
+ <?php
   include "src/footer.php";
  ?>
